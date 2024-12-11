@@ -1,4 +1,4 @@
-module github.com/gkeiser/01
+module github.com/gkeiser/o1
 
 go 1.23.2
 
