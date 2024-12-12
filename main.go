@@ -35,7 +35,10 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to get chat completion: %v ", err)
 	}
-	println(chatCompletion.Choices[0].Message.Content)
+	if len(chatCompletion.Choices) == 0 {
+		log.Fatal("No completions returned")
+	}
+	fmt.Println(chatCompletion.Choices[0].Message.Content)
 }
 
 func readInput() string {
